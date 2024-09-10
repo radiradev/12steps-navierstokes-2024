@@ -5,6 +5,14 @@ app = marimo.App()
 
 
 @app.cell
+def __():
+    import numpy as np                 
+    import matplotlib.pyplot as plt
+    import marimo as mo
+    return mo, np, plt
+
+
+@app.cell(hide_code=True)
 def __(mo):
     mo.md("""# 1-D Linear Convection""")
     return
@@ -55,7 +63,7 @@ def __(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(
         """
@@ -65,14 +73,6 @@ def __(mo):
         """
     )
     return
-
-
-@app.cell
-def __():
-    import numpy as np                 
-    import matplotlib.pyplot as plt
-    import marimo as mo
-    return mo, np, plt
 
 
 @app.cell
